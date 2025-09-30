@@ -1,5 +1,6 @@
 import pygame as pg
 import os, time, random
+times_run = 0
 pg.init()
 WIN , HEI = 360, 480
 inital_x, inital_y = 0, 0
@@ -16,6 +17,9 @@ window.fill((0,0,0))
 color = ()
 Run = True
 color_list = []
+def count():
+    times_run +=1
+    return times_run
 while Run:
     pos = (s.x, s.y)
     color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
@@ -34,6 +38,8 @@ while Run:
             if event.key == pg.K_ESCAPE:
                 Run = False
                 print("Ended!!")
+                print(times_run)
     if s.y < HEI:
         color_list.append(color)
     pg.display.flip()
+    count()
