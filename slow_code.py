@@ -37,16 +37,4 @@ while Run:
     if s.y < HEI:
         color_list.append(color)
     pg.display.flip()
-
-
-
-
-
-
-
-
-
-
-
-
 yoloy
